@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <UserSecretsId>aspnet-WebLabs-B50D75A5-5D02-49E1-87EF-81E02F86E924</UserSecretsId>
+    <UserSecretsId>aspnet-WebLabs-5C294F54-8DC6-4AF0-8112-854E62F4A3AD</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,6 +11,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
 </Project>

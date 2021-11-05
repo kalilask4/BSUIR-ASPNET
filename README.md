@@ -1,1 +1,2 @@
-# web-labs
+# Bsuir labs
+1. HTML, CSS.

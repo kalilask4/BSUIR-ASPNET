@@ -20,5 +20,11 @@ namespace WebLabs.Controllers
         //     return View();
         // }
         
+        // public IActionResult Index()
+        // {
+        //     ViewBag.Text = "Lab 2";
+        //     return View();
+        // }
+        
     }
 }

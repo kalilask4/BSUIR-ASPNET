@@ -6,40 +6,81 @@
     <title>@ViewData["Title"] - WebLabs</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebLabs</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        @* <li class="nav-item"> *@
-                        @*     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
-                        @* </li> *@
-                    </ul>
-                    <partial name="_LoginPartial" />
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+        <div class="container">
+            <!-- Navigation bar -->
+            <span class="nav-color">Tittle</span>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <!-- Site menu -->
+                <a class="navbar-brand" href="#">WebLabs</a>
+                <div class="navbar-nav">
 
-    <footer class="border-top footer text-muted">
-        @* <div class="container"> *@
-        @*     &copy; 2021 - WebLabs - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
-        @* </div> *@
+                    <a class="nav-item nav-link active" asp-controller="Home" asp-
+                       action="Index">Lab 2</a>
+
+                    <a class="nav-item nav-link" asp-controller="Product" asp-
+                       action="Index">Каталог</a>
+
+                    <a class="nav-item nav-link" asp-area="Admin" asp-
+                       page="/Index">Администрирование</a>
+
+                </div>
+                <!-- site menu - end -->
+                <!-- User info -->
+                <a href="#" class="navbar-text ml-auto">
+                    00,0 руб <i class="fas fa-shopping-cart nav-color"></i> (0)
+                </a>
+                <div class="dropdown ml-4 nav-color">
+                    <div class="dropdown-toggle" id="dropdownMenuButton"
+                         data-toggle="dropdown" aria-haspopup="true"
+                         aria-expanded="false">
+                        <img src="images/defaultavatar2.jpg" width="30"
+                             alt="User" class="rounded" />
+                    </div>
+                    <div class="dropdown-menu"
+                         aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-item-text">
+                            <img src="images/defaultavatar2.jpg" width="50"
+                                 alt="User" class="rounded" />
+                            user@mail.ru
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">My cart</a>
+                        <a class="dropdown-item" href="#">Log off</a>
+                    </div>
+                </div>
+                <!-- User info - end -->
+            </nav>
+            <!-- Navigation bar - end-->
+        </div><!-- container - end -->
+    </header><!-- header - end -->
+    <main class="container">
+        @RenderBody();
+    </main>
+    <footer class="fixed-bottom">
+        <div class="navbar navbar-dark navbar-expand-md bg-dark">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="http://www.facebook.com">
+                    <!--<img src="images/fb.png" width="30" />-->
+                    <i class="fab fa-facebook-f fa-2x"></i>
+                </a>
+                <a class="nav-item nav-link" href="http://www.vk.com">
+                    <!--<img src="images/vk.png" width="30" />-->
+                    <i class="fab fa-vk fa-2x"></i>
+                </a>
+                <a class="nav-item nav-link" href="http://www.twitter.com">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a class="nav-item nav-link" href="http://www.instagram.com">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+            </div>
+        </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

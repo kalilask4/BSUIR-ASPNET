@@ -6,11 +6,10 @@
     <title>@ViewData["Title"] - WebLabs</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
     <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-    <script src="lib/jquery/dist/jquery.js"></script>
-    <script src="lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <header>
         <div class="container">
             <!-- Navigation bar -->
@@ -24,10 +23,10 @@
                        action="Index">Lab 2</a>
 
                     <a class="nav-item nav-link" asp-controller="Product" asp-
-                       action="Index">Каталог</a>
+                       action="Index">Catalog</a>
 
                     <a class="nav-item nav-link" asp-area="Admin" asp-
-                       page="/Index">Администрирование</a>
+                       page="/Index">Admin</a>
 
                 </div>
                 <!-- site menu - end -->
@@ -39,19 +38,19 @@
                     <div class="dropdown-toggle" id="dropdownMenuButton"
                          data-toggle="dropdown" aria-haspopup="true"
                          aria-expanded="false">
-                        <img src="images/defaultavatar2.jpg" width="30"
+                        <img src="images/defaultavatar.jpg" width="30"
                              alt="User" class="rounded" />
                     </div>
                     <div class="dropdown-menu"
                          aria-labelledby="dropdownMenuButton">
                         <div class="dropdown-item-text">
-                            <img src="images/defaultavatar2.jpg" width="50"
+                            <img src="images/defaultavatar.jpg" width="50"
                                  alt="User" class="rounded" />
                             user@mail.ru
                         </div>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">My cart</a>
-                        <a class="dropdown-item" href="#">Log off</a>
+                        <a class="dropdown-item" asp-controller="Cart" asp-action="Index">My cart</a>
+                        <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout">Log off</a>
                     </div>
                 </div>
                 <!-- User info - end -->
@@ -62,29 +61,5 @@
     <main class="container">
         @RenderBody();
     </main>
-    <footer class="fixed-bottom">
-        <div class="navbar navbar-dark navbar-expand-md bg-dark">
-            <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link" href="http://www.facebook.com">
-                    <!--<img src="images/fb.png" width="30" />-->
-                    <i class="fab fa-facebook-f fa-2x"></i>
-                </a>
-                <a class="nav-item nav-link" href="http://www.vk.com">
-                    <!--<img src="images/vk.png" width="30" />-->
-                    <i class="fab fa-vk fa-2x"></i>
-                </a>
-                <a class="nav-item nav-link" href="http://www.twitter.com">
-                    <i class="fab fa-twitter fa-2x"></i>
-                </a>
-                <a class="nav-item nav-link" href="http://www.instagram.com">
-                    <i class="fab fa-instagram fa-2x"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

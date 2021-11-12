@@ -3,17 +3,16 @@
     public class MenuItem
     {
         public string Text { get; set; }
-        //страница или метод контроллера
+        //page or method
         public bool IsPage { get; set; } = false;
-        public  string ControllerName { get; set; }
-        // имя действия контроллера
-        public  string MethodName { get; set; }
-        // имя действия контроллера
-        public  string PageName { get; set; }
-        // имя области
-        public  string AreaName { get; set; }
-        // класс CSS для текущего пункта меню
-        public  string CssName { get; set; }
+        public  string Controller { get; set; }
+        // controller action
+        public  string Action { get; set; }
+        public  string Page { get; set; }
+        // Area name
+        public  string Area { get; set; }
+        // class CSS for current menu item
+        public  string Active { get; set; }
         
     }
 }

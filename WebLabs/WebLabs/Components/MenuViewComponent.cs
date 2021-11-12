@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using WebLabs.Models;
 
 namespace WebLabs.Components
@@ -11,10 +9,10 @@ namespace WebLabs.Components
         //Init list menu items
         private List<MenuItem> _menuItems = new List<MenuItem>
         {
-            new MenuItem{ ControllerName= "Home", PageName= "Index", Text="Lab 3"},
-            new MenuItem{ ControllerName="Product", PageName="Index",
+            new MenuItem{ Controller= "Home", Page= "Index", Text="Lab 3"},
+            new MenuItem{ Controller="Product", Page="Index",
                 Text="Catalog"},
-            new MenuItem{ IsPage=true, AreaName= "Admin", PageName= "/Index",
+            new MenuItem{ IsPage=true, Area= "Admin", Page= "/Index",
                 Text="Admin"}
         };
         
@@ -25,11 +23,11 @@ namespace WebLabs.Components
             var area = ViewContext.RouteData.Values["area"];
             foreach(var item in _menuItems)
             {
-                var _matchController = controller?.Equals(item.ControllerName) ?? false;
-                var _matchArea = area?.Equals(item.AreaName) ?? false;
+                var _matchController = controller?.Equals(item.Controller) ?? false;
+                var _matchArea = area?.Equals(item.Area) ?? false;
                 if(_matchController || _matchArea)
                 {
-                    item.CssName = "active";
+                    item.Active = "active";
                 }
             }
             return View(_menuItems);

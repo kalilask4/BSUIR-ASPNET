@@ -17,7 +17,8 @@
                             user@mail.ru
                         </div>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" asp-controller="Cart" asp-action="Index">My cart</a>
+                        @* <a class="dropdown-item" asp-controller="Cart" asp-action="Index">My cart</a> *@
+                        @await Component.InvokeAsync("Cart")
                         <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout">Log off</a>
                     </div>
                 </div>

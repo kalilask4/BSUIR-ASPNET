@@ -10,10 +10,8 @@ namespace WebLabs.Components
         private List<MenuItem> _menuItems = new List<MenuItem>
         {
             new MenuItem{ Controller= "Home", Page= "Index", Text="Lab 3"},
-            new MenuItem{ Controller="Product", Page="Index",
-                Text="Catalog"},
-            new MenuItem{ IsPage=true, Area= "Admin", Page= "/Index",
-                Text="Admin"}
+            new MenuItem{ Controller="Product", Page="Index", Text="Catalog"},
+            new MenuItem{ IsPage=true, Area= "Admin", Page= "/Index", Text="Admin"}
         };
         
         public IViewComponentResult Invoke()

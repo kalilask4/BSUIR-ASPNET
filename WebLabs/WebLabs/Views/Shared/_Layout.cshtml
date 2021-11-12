@@ -16,20 +16,32 @@
             <span class="nav-color">Tittle</span>
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <!-- Site menu -->
-                <a class="navbar-brand" href="#">WebLabs</a>
+
+                <a class="navbar-brand" asp-action="Index" asp-
+                   controller="Home">WebLabs</a>
+
                 <div class="navbar-nav">
-
-                    <a class="nav-item nav-link active" asp-controller="Home" asp-
-                       action="Index">Lab 2</a>
-
-                    <a class="nav-item nav-link" asp-controller="Product" asp-
-                       action="Index">Catalog</a>
-
-                    <a class="nav-item nav-link" asp-area="Admin" asp-
-                       page="/Index">Admin</a>
-
+                    @await Component.InvokeAsync("Menu")
                 </div>
-                <!-- site menu - end -->
+                <!-- site menu - end --> 
+
+                @* <!-- Site menu --> *@
+                @* <a class="navbar-brand" href="#">WebLabs</a> *@
+                @* <div class="navbar-nav"> *@
+                @* *@
+                @*     <a class="nav-item nav-link active" asp-controller="Home" asp- *@
+                @*        action="Index">Lab 2</a> *@
+                @* *@
+                @*     <a class="nav-item nav-link" asp-controller="Product" asp- *@
+                @*        action="Index">Catalog</a> *@
+                @* *@
+                @*     <a class="nav-item nav-link" asp-area="Admin" asp- *@
+                @*        page="/Index">Admin</a> *@
+                @* *@
+                @* </div> *@
+                @* <!-- site menu - end --> *@
+
+
                 <!-- User info -->
                 <a href="#" class="navbar-text ml-auto">
                     00,0 руб <i class="fas fa-shopping-cart nav-color"></i> (0)
@@ -39,13 +51,13 @@
                          data-toggle="dropdown" aria-haspopup="true"
                          aria-expanded="false">
                         <img src="images/defaultavatar.jpg" width="30"
-                             alt="User" class="rounded" />
+                             alt="User" class="rounded"/>
                     </div>
                     <div class="dropdown-menu"
                          aria-labelledby="dropdownMenuButton">
                         <div class="dropdown-item-text">
                             <img src="images/defaultavatar.jpg" width="50"
-                                 alt="User" class="rounded" />
+                                 alt="User" class="rounded"/>
                             user@mail.ru
                         </div>
                         <div class="dropdown-divider"></div>
@@ -63,3 +75,4 @@
     </main>
 </body>
 </html>
+

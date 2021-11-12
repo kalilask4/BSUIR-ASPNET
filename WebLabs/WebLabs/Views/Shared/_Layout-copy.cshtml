@@ -1,0 +1,65 @@
+﻿@* <!DOCTYPE html> *@
+@* <html lang="en"> *@
+@* <head> *@
+@*     <meta charset="utf-8" /> *@
+@*     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> *@
+@*     <title>@ViewData["Title"] - WebLabs</title> *@
+@*     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+@*     <link rel="stylesheet" href="~/css/site.css" /> *@
+@*     <link href="~/lib/font-awesome/css/all.css" rel="stylesheet" /> *@
+@*     <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" /> *@
+@* </head> *@
+@* <body> *@
+@*     <header> *@
+@*         <div class="container"> *@
+@*             <!-- Navigation bar --> *@
+@*             <span class="nav-color">Tittle</span> *@
+@*             <nav class="navbar navbar-expand-md navbar-dark bg-dark"> *@
+@*                 <!-- Site menu --> *@
+@*                 <a class="navbar-brand" href="#">WebLabs</a> *@
+@*                 <div class="navbar-nav"> *@
+@* *@
+@*                     <a class="nav-item nav-link active" asp-controller="Home" asp- *@
+@*                        action="Index">Lab 2</a> *@
+@* *@
+@*                     <a class="nav-item nav-link" asp-controller="Product" asp- *@
+@*                        action="Index">Catalog</a> *@
+@* *@
+@*                     <a class="nav-item nav-link" asp-area="Admin" asp- *@
+@*                        page="/Index">Admin</a> *@
+@* *@
+@*                 </div> *@
+@*                 <!-- site menu - end --> *@
+@*                 <!-- User info --> *@
+@*                 <a href="#" class="navbar-text ml-auto"> *@
+@*                     00,0 руб <i class="fas fa-shopping-cart nav-color"></i> (0) *@
+@*                 </a> *@
+@*                 <div class="dropdown ml-4 nav-color"> *@
+@*                     <div class="dropdown-toggle" id="dropdownMenuButton" *@
+@*                          data-toggle="dropdown" aria-haspopup="true" *@
+@*                          aria-expanded="false"> *@
+@*                         <img src="images/defaultavatar.jpg" width="30" *@
+@*                              alt="User" class="rounded" /> *@
+@*                     </div> *@
+@*                     <div class="dropdown-menu" *@
+@*                          aria-labelledby="dropdownMenuButton"> *@
+@*                         <div class="dropdown-item-text"> *@
+@*                             <img src="images/defaultavatar.jpg" width="50" *@
+@*                                  alt="User" class="rounded" /> *@
+@*                             user@mail.ru *@
+@*                         </div> *@
+@*                         <div class="dropdown-divider"></div> *@
+@*                         <a class="dropdown-item" asp-controller="Cart" asp-action="Index">My cart</a> *@
+@*                         <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout">Log off</a> *@
+@*                     </div> *@
+@*                 </div> *@
+@*                 <!-- User info - end --> *@
+@*             </nav> *@
+@*             <!-- Navigation bar - end--> *@
+@*         </div><!-- container - end --> *@
+@*     </header><!-- header - end --> *@
+@*     <main class="container"> *@
+@*         @RenderBody(); *@
+@*     </main> *@
+@* </body> *@
+@* </html> *@
